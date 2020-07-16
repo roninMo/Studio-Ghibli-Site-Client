@@ -1,0 +1,17 @@
+.film-link {
+  cursor: pointer;
+}
+
+.film {
+  color: #eee;
+  text-decoration: none;
+  transition: color 340ms;
+}
+
+.film:hover {
+  color: #1976d1;
+}
+
+.nav-link {
+  transition: color 340ms;
+}

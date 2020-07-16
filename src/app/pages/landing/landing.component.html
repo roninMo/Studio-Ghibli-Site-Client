@@ -1,0 +1,11 @@
+<div class="row justify-content-center no-gutters">
+  <div *ngFor="let film of films" [class]="'col-lg-3 col-md-4 col-sm-6'">
+    <div [class]="'card img-fade'">
+      <img
+        [src]="'../../assets/img/posters/' + film + '.jpg'"
+        [alt]="film"
+        [class]="'img-fluid'"
+      />
+    </div>
+  </div>
+</div>
