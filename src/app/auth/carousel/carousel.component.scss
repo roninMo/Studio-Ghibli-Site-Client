@@ -1,0 +1,91 @@
+@import "../../../styles.scss";
+
+.film-title,
+.title-border h4 {
+  font-family: "Roboto";
+}
+
+.bgd {
+  background-color: $primary;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.film-title {
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  padding: 0.5em 1em 0.5em 1.5em;
+}
+
+.title-border {
+  width: 100%;
+  position: relative;
+  z-index: 4500;
+  background-color: $primary;
+  padding: 3rem;
+  margin-top: -10px;
+  text-align: center;
+  border: none;
+}
+.title-border h4 {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+.title-border p {
+  font-size: 1rem;
+}
+
+.carousel-height {
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  opacity: 0.9;
+}
+
+.carousel {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+
+@media only screen and (max-width: 2000px) {
+  .carousel-height {
+    height: 800px !important;
+  }
+}
+@media only screen and (max-width: 1664px) {
+  .carousel-height {
+    height: 754px !important;
+  }
+}
+@media only screen and (max-width: 1264px) {
+  .carousel-height {
+    height: 664px !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .carousel-height {
+    height: 534px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .carousel-height {
+    height: 364px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .carousel-height {
+    height: 250px !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .carousel-height {
+    height: 1540px !important;
+  }
+}
+// 1364,1024,768,480,320

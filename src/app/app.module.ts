@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { CharactersComponent } from './pages/characters/characters.component';
 import { VehiclesComponent } from './pages/vehicles/vehicles.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { CarouselComponent } from './auth/carousel/carousel.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +30,10 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     VehiclesComponent,
     HomeComponent,
     PageNotFoundComponent,
+    CarouselComponent,
+    FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
