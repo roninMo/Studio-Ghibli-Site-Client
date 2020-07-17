@@ -1,6 +1,49 @@
-<p>film works!</p>
+<div *ngIf="film">
+  <div
+    [class]="'carousel slide'"
+    data-ride="carousel"
+    data-interval="4000"
+    data-pause="false"
+  >
+    <div [class]="'carousel-inner'">
+      <div [class]="'carousel-item active'">
+        <img
+          [class]="'d-block w-100 carousel-height'"
+          [src]="'../../../assets/img/movies/' + film + '/img_1.jpg'"
+          alt="Studio Ghibli Collection"
+        />
+      </div>
+
+      <div [class]="'carousel-item'" *ngFor="let i of imageIter">
+        <img
+          [src]="'../../../assets/img/movies/' + film + '/img_' + i + '.jpg'"
+          alt=""
+          [class]="'d-block w-100 carousel-height'"
+        />
+      </div>
+    </div>
+
+    <div [class]="'title-border text-light'">
+      <div [class]="'container'">
+        <h4 [class]="'mb-4'">The Studio Ghibli Collection</h4>
+        <p>
+          Studio Ghibli is one of the most acclaimed animation studios in the
+          world, and the home of some of the most revered and beloved animated
+          works to have ever graced the screen.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- 
+    data-interval="4000"
+    data-pause="false"
+    
+    '../../../assets/img/movies/' + film + '/img_' + iteration + '.jpg'
+    
+
+
     This is for if you're gonna attach specific styling to different elements!
     <div *ngFor="let boat of boats">
         <h3 [ngClass]="{

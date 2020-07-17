@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { FilmUrls } from 'src/app/filmMetaData';
 
@@ -11,7 +12,7 @@ export class LandingComponent implements OnInit {
   // localStorage is a schnazzy function for storing data, up to 5mb, helps with authentication
   films = FilmUrls;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 }

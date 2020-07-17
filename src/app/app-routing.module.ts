@@ -19,7 +19,7 @@ const routes: Routes = [
     path: 'auth',
     component: CarouselComponent,
     children: [
-      { path: '', redirectTo: 'signup', pathMatch: 'full' },
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
     ],
@@ -30,14 +30,18 @@ const routes: Routes = [
     path: 'home',
     component: NavComponent,
     children: [
-      { path: '', redirectTo: 'landing', pathMatch: 'full' },
-      { path: 'landing', component: LandingComponent },
-      { path: 'characters', component: CharactersComponent },
-      { path: 'species', component: SpeciesComponent },
-      { path: 'vehicles', component: VehiclesComponent },
-      { path: 'film', component: FilmComponent },
+      { path: '', redirectTo: 'films', pathMatch: 'full' },
+      {
+        path: 'films',
+        component: LandingComponent,
+      },
+      { path: 'films/:name', component: FilmComponent },
     ],
   },
+  { path: 'films/:name', component: FilmComponent },
+  { path: 'characters', component: CharactersComponent },
+  { path: 'species', component: SpeciesComponent },
+  { path: 'vehicles', component: VehiclesComponent },
 
   { path: '**', component: PageNotFoundComponent },
 ];

@@ -7,11 +7,13 @@
     [class]="'col-lg-3 col-md-4 col-sm-6 card-align'"
   >
     <div [class]="'card img-fade'">
-      <img
-        [src]="'../../assets/img/posters/' + film + '.jpg'"
-        [alt]="film"
-        [class]="'img-fluid'"
-      />
+      <a [routerLink]="['/home/films', film]">
+        <img
+          [src]="'../../assets/img/posters/' + film + '.jpg'"
+          alt="film"
+          [class]="'img-fluid'"
+        />
+      </a>
     </div>
   </div>
 </div>
