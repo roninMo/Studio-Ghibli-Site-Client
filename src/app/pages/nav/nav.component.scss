@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 .film-link {
   cursor: pointer;
 }
@@ -5,13 +7,53 @@
 .film {
   color: #eee;
   text-decoration: none;
-  transition: color 340ms;
+  cursor: pointer;
+  transition: color $transition;
 }
 
 .film:hover {
-  color: #1976d1;
+  color: $secondary;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #eee;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: $tertiary;
+  transition: color $transition;
 }
 
 .nav-link {
-  transition: color 340ms;
+  transition: color $transition;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-outline-primary {
+  border-color: $quinary;
+  color: $quinary;
+  transition: color $transition, background-color $transition;
+}
+.btn-outline-primary:hover {
+  border-color: $quinary;
+  background-color: $quinary;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle {
+  background-color: $quinary;
+  border-color: $quinary;
+}
+
+.btn-outline-primary.focus,
+.btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.2rem $quinaryHover;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $quinaryHover;
 }

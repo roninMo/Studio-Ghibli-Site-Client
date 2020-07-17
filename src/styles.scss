@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+$transition: 340ms;
+
+// Colors
+$primary: #343b3f;
+$secondary: #009ffd;
+$tertiary: #2de1c2;
+$quarternary: #ffa400;
+$quinary: #cc5a71; // Try dd1155, CC5A71, FF99C8, F3E8EE
+$white: "#eee";
+
+$primaryHover: rgba(52, 59, 63, 0.5);
+$secondaryHover: rgba(0, 159, 253, 0.5);
+$tertiaryHover: rgba(45, 225, 194, 0.5);
+$quarternaryHover: rgba(255, 164, 0, 0.5);
+$quinaryHover: rgba(221, 17, 85, 0.5);
+
+$secondaryDarken: #006cca;
+
+// * {
+//   font-family: "Roboto";
+// }

@@ -12,3 +12,15 @@
   // transform: scale(1.05);
   opacity: 0.9;
 }
+
+// Side scrolling is really bad especially for mobile devices (This should fix it with the way the images are scrunchied together
+@media only screen and (max-width: 575px) {
+  .img-fade img {
+    transform: none;
+    transform: scaleY(1.0075);
+  }
+
+  .card-align:nth-child(n + 2) {
+    margin-top: -5px;
+  }
+}
