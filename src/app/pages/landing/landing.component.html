@@ -2,18 +2,19 @@
   <!-- Hello landing section -->
 
   <!-- All the film images -->
+
   <div
-    *ngFor="let film of films"
+    *ngFor="let film of filmIterables"
     [class]="'col-lg-3 col-md-4 col-sm-6 card-align'"
   >
+    <p>{{ film.name }}</p>
     <div [class]="'card img-fade'">
-      <a [routerLink]="['/home/films', film]">
-        <img
-          [src]="'../../assets/img/posters/' + film + '.jpg'"
-          alt="film"
-          [class]="'img-fluid'"
-        />
+      <a [routerLink]="['/home/films', film.name]">
+        <img [src]="film.url" alt="film" [class]="'img-fluid'" />
       </a>
     </div>
   </div>
 </div>
+
+<!-- [src]="'../../assets/img/posters/' + film + '.jpg'" -->
+<!--  -->

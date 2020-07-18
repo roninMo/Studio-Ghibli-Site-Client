@@ -1,5 +1,44 @@
+<ngb-carousel
+  [showNavigationArrows]="false"
+  [showNavigationIndicators]="false"
+  [interval]="4000"
+  [pauseOnHover]="false"
+>
+  <ng-template ngbSlide>
+    <div class="pcisum-img-wrapper">
+      <img
+        class="d-block w-100 carousel-height"
+        src="../../../assets/img/_collection.jpg"
+        alt="Studio Ghibli Collection"
+      />
+    </div>
+  </ng-template>
+
+  <ng-template ngbSlide *ngFor="let film of filmDirs">
+    <div class="picsum-img-wrapper">
+      <img
+        [src]="'../../../assets/img/movies/' + film + '/initial.jpg'"
+        [class]="'d-block w-100 carousel-height'"
+        [alt]="film"
+      />
+    </div>
+    <div [class]="'bgd film-title text-light'">{{ film }}</div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="title-border text-light">
+  <div class="container">
+    <h4 class="mb-4">The Studio Ghibli Collection</h4>
+    <p>
+      Studio Ghibli is one of the most acclaimed animation studios in the world,
+      and the home of some of the most revered and beloved animated works to
+      have ever graced the screen.
+    </p>
+  </div>
+</div>
+
+<!--  
 <div
-  id="carouselExampleSlidesOnly"
   class="carousel slide"
   data-ride="carousel"
   data-interval="4000"
@@ -34,4 +73,5 @@
     </div>
   </div>
 </div>
+-->
 <router-outlet></router-outlet>

@@ -11,7 +11,7 @@ import { FilmUrls } from '../../filmMetaData';
 })
 export class FilmComponent implements OnInit {
   films = FilmUrls;
-  imageIter = ['2', '3', '4'];
+  imageIter = ['1', '2', '3', '4'];
   public film;
 
   constructor(private route: ActivatedRoute) {}

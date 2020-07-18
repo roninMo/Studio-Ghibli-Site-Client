@@ -38,7 +38,6 @@ const routes: Routes = [
       { path: 'films/:name', component: FilmComponent },
     ],
   },
-  { path: 'films/:name', component: FilmComponent },
   { path: 'characters', component: CharactersComponent },
   { path: 'species', component: SpeciesComponent },
   { path: 'vehicles', component: VehiclesComponent },
