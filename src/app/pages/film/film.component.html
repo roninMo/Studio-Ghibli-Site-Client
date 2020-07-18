@@ -1,19 +1,24 @@
-<p>film works!</p>
+<div *ngIf="film">
+  <ngb-carousel
+    [showNavigationArrows]="false"
+    [showNavigationIndicators]="false"
+    [interval]="4000"
+    [pauseOnHover]="false"
+  >
+    <ng-template ngbSlide *ngFor="let i of imageIter">
+      <div class="picsum-img-wrapper">
+        <img
+          [src]="'../../../assets/img/movies/' + film + '/img_' + i + '.jpg'"
+          [class]="'d-block w-100 carousel-height'"
+          [alt]="film"
+        />
+      </div>
+    </ng-template>
+  </ngb-carousel>
 
-<!-- 
-    This is for if you're gonna attach specific styling to different elements!
-    <div *ngFor="let boat of boats">
-        <h3 [ngClass]="{
-            'green': boat.name === 'Starfire',
-            'red': boat.name === 'Oracle'
-        }">
-        </h3>
-
-        <img [src]="boat.img" width="200px">
-        <p> Built in {{ boat.year }} </p>
+  <div [class]="'title-border text-light'">
+    <div [class]="'container'">
+      <h4>{{ film }}</h4>
     </div>
-
-
-
-    Get a specific value from a button -- in order to toggle these classes!
- -->
+  </div>
+</div>

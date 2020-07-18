@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
 $transition: 340ms;
 
 // Colors
@@ -8,7 +11,7 @@ $secondary: #009ffd;
 $tertiary: #2de1c2;
 $quarternary: #ffa400;
 $quinary: #cc5a71; // Try dd1155, CC5A71, FF99C8, F3E8EE
-$white: "#eee";
+$lightText: #eeeeee;
 
 $primaryHover: rgba(52, 59, 63, 0.5);
 $secondaryHover: rgba(0, 159, 253, 0.5);

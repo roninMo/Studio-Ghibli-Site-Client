@@ -1,5 +1,6 @@
 .img-fade {
   background: #000000;
+  animation: fadeInEase 1.5s;
 }
 
 .img-fade img {
@@ -22,5 +23,17 @@
 
   .card-align:nth-child(n + 2) {
     margin-top: -5px;
+  }
+}
+
+@keyframes fadeInEase {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

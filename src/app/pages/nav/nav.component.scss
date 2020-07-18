@@ -5,18 +5,18 @@
 }
 
 .film {
-  color: #eee;
+  color: $lightText !important;
   text-decoration: none;
   cursor: pointer;
   transition: color $transition;
 }
 
 .film:hover {
-  color: $secondary;
+  color: $secondary !important;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #eee;
+  color: $lightText;
 }
 .navbar-dark .navbar-nav .nav-link:hover {
   color: $tertiary;
