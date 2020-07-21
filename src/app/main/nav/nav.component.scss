@@ -6,7 +6,7 @@
 
 .film {
   color: $lightText !important;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
   transition: color $transition;
 }
@@ -32,6 +32,7 @@
   padding-right: 0;
 }
 
+// Login
 .btn-outline-primary {
   border-color: $quinary;
   color: $quinary;
@@ -56,4 +57,31 @@
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
 .show > .btn-outline-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem $quinaryHover;
+}
+
+// Login
+.btn-outline-secondary {
+  border-color: $tertiary;
+  color: $tertiary;
+  transition: color $transition, background-color $transition;
+}
+.btn-outline-secondary:hover {
+  border-color: $tertiary;
+  background-color: $tertiary;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-secondary.dropdown-toggle {
+  background-color: $tertiary;
+  border-color: $tertiary;
+}
+
+.btn-outline-secondary.focus,
+.btn-outline-secondary:focus {
+  box-shadow: 0 0 0 0.2rem $tertiaryHover;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-outline-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $tertiaryHover;
 }

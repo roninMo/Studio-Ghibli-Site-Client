@@ -5,13 +5,13 @@ import { CarouselComponent } from './auth/carousel/carousel.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 
-import { NavComponent } from './pages/nav/nav.component';
-import { LandingComponent } from './pages/landing/landing.component';
-import { FilmComponent } from './pages/film/film.component';
-import { CharactersComponent } from './pages/characters/characters.component';
-import { SpeciesComponent } from './pages/species/species.component';
-import { VehiclesComponent } from './pages/vehicles/vehicles.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { NavComponent } from './main/nav/nav.component';
+import { LandingComponent } from './main/landing/landing.component';
+import { FilmComponent } from './main/film/film.component';
+import { CharactersComponent } from './main/characters/characters.component';
+import { SpeciesComponent } from './main/species/species.component';
+import { VehiclesComponent } from './main/vehicles/vehicles.component';
+import { PageNotFoundComponent } from './main/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,7 +25,7 @@ const routes: Routes = [
     ],
   },
 
-  // Auth guarded components
+  // Auth guarded components     canActivate: [AuthGuard],
   {
     path: 'home',
     component: NavComponent,

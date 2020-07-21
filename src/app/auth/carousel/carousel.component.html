@@ -17,12 +17,12 @@
   <ng-template ngbSlide *ngFor="let film of filmDirs">
     <div class="picsum-img-wrapper">
       <img
-        [src]="'../../../assets/img/movies/' + film + '/initial.jpg'"
+        [src]="'../../../assets/img/movies/' + film.name + '/initial.jpg'"
         [class]="'d-block w-100 carousel-height'"
         [alt]="film"
       />
     </div>
-    <div [class]="'bgd film-title text-light'">{{ film }}</div>
+    <div [class]="'bgd film-title text-light'">{{ film.name }}</div>
   </ng-template>
 </ngb-carousel>
 

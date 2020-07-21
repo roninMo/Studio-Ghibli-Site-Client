@@ -4,7 +4,9 @@
       <h4 [class]="'col-12 text-white'">All Films</h4>
       <div [class]="'row justify-content-start'">
         <div *ngFor="let film of films" [class]="'col-lg-3 col-md-5 col-sm-12'">
-          <a [class]="'film'">{{ film }}</a>
+          <a [class]="'film'" [routerLink]="['/home/films', film.name]">{{
+            film.name
+          }}</a>
         </div>
       </div>
     </div>
@@ -73,6 +75,15 @@
     <!-- <div [class]="'navbar-text'">asdahdkahadldjsh</div> -->
     <a [class]="'navbar-text'">
       <button
+        *ngIf="!loggedIn"
+        type="button"
+        [class]="'btn btn-outline-secondary'"
+        routerLink="/auth"
+      >
+        Login
+      </button>
+      <button
+        *ngIf="loggedIn"
         type="button"
         [class]="'btn btn-outline-primary'"
         (click)="logout()"

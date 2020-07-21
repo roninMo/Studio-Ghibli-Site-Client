@@ -1,4 +1,4 @@
-<div class="row justify-content-center no-gutters">
+<div class="row justify-content-center no-gutters mb-5">
   <!-- Hello landing section -->
 
   <!-- All the film images -->
@@ -7,7 +7,6 @@
     *ngFor="let film of filmIterables"
     [class]="'col-lg-3 col-md-4 col-sm-6 card-align'"
   >
-    <p>{{ film.name }}</p>
     <div [class]="'card img-fade'">
       <a [routerLink]="['/home/films', film.name]">
         <img [src]="film.url" alt="film" [class]="'img-fluid'" />
