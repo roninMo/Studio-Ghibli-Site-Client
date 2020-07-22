@@ -4,7 +4,7 @@
   <!-- All the film images -->
 
   <div
-    *ngFor="let film of filmIterables"
+    *ngFor="let film of filmIterables; index as i"
     [class]="'col-lg-3 col-md-4 col-sm-6 card-align'"
   >
     <div [class]="'card img-fade'">

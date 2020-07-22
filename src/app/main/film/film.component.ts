@@ -40,7 +40,6 @@ export class FilmComponent implements OnInit {
     this.api.getFilm(this.film).subscribe((data) => {
       // The film
       this.filmData = data[0];
-      console.log(`FilmData: `, this.filmData);
 
       if (this.filmData) {
         // People set
@@ -91,6 +90,5 @@ export class FilmComponent implements OnInit {
         }
       }
     });
-    console.log('return data', this.ret);
   }
 }
