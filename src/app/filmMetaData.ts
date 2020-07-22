@@ -10,7 +10,7 @@ export const FilmUrls: any[] = [
       'https://www.studioghibli.com.au/wp-content/uploads/2017/07/poster_my_neighbor_totoro-683x1024.jpg',
   },
   {
-    name: 'Laputa Castle in the Sky',
+    name: 'Castle in the Sky',
     url:
       'https://www.studioghibli.com.au/wp-content/uploads/2017/07/1476-title-treatment-portrait-key-art-normal-medium-683x1024.jpg',
   },
@@ -80,7 +80,7 @@ export const FilmUrls: any[] = [
       'https://www.studioghibli.com.au/wp-content/uploads/2017/07/5845-title-treatment-portrait-key-art-normal-medium-683x1024.jpg',
   },
   {
-    name: 'From Up On Poppy Hill',
+    name: 'From Up on Poppy Hill',
     url:
       'https://www.studioghibli.com.au/wp-content/uploads/2017/07/16933-title-treatment-portrait-key-art-normal-medium-683x1024.jpg',
   },

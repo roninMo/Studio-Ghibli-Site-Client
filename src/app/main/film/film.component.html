@@ -1,0 +1,217 @@
+<div *ngIf="film" [class]="'mb-5'">
+  <ngb-carousel
+    [showNavigationArrows]="false"
+    [showNavigationIndicators]="false"
+    [interval]="4000"
+    [pauseOnHover]="false"
+  >
+    <ng-template ngbSlide *ngFor="let i of imageIter">
+      <div class="picsum-img-wrapper">
+        <img
+          [src]="'../../../assets/img/movies/' + film + '/img_' + i + '.jpg'"
+          [class]="'d-block w-100 carousel-height'"
+          [alt]="film"
+        />
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <div [class]="'title-border text-light'">
+    <div [class]="'container'">
+      <h4>{{ film }}</h4>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="filmData">
+  <!-- Film data will be divided into multiple categories -->
+
+  <!-- Metadata -->
+  <div class="row align-items-center">
+    <div class="col-lg-7 col-md-8 col-sm-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ filmData.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Summary</h6>
+          <p class="card-text">{{ filmData.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-5 col-md-4 col-sm-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Details</h5>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Director:</strong> {{ filmData.director }}
+            </li>
+            <li class="list-group-item">
+              <strong>Producer:</strong> {{ filmData.producer }}
+            </li>
+            <li class="list-group-item">
+              <strong>Release Date:</strong> {{ filmData.release_date }}
+            </li>
+            <li class="list-group-item">
+              <strong>ratings:</strong> {{ filmData.rt_score }}
+            </li>
+            <li class="list-group-item">
+              <a [href]="filmData.url" [class]="'api-link'">Api data</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- People -->
+  <div class="row justify-content-md-center">
+    <h4 *ngIf="ret.people?.length >= 1" [class]="'mt-5 text-center w-100'">
+      Characters
+    </h4>
+    <div
+      *ngFor="let person of ret.people"
+      [class]="'col-lg-3 col-md-4 col-sm-12 mt-4'"
+    >
+      <div [class]="'card'">
+        <div [class]="'card-body'">
+          <h5 [class]="'card-title'">{{ person.name }}</h5>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Gender: </strong>{{ person.gender }}
+            </li>
+            <li class="list-group-item">
+              <strong>Age: </strong>{{ person.age }}
+            </li>
+            <li class="list-group-item">
+              <strong>Hair color: </strong>{{ person.hair_color }}
+            </li>
+            <li class="list-group-item">
+              <strong>Eye color: </strong>{{ person.eye_color }}
+            </li>
+            <li class="list-group-item">
+              <a [href]="person.films[0]" [class]="'api-link'">Api film data</a>
+            </li>
+            <li class="list-group-item">
+              <a [href]="person.species" [class]="'api-link'"
+                >Api species data</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a [href]="person.url" [class]="'api-link'">Api data</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="ret.people?.length <= 1" [class]="'col-sm-12 mt-4'">
+      <div [class]="'card'">
+        <div [class]="'card-body'">
+          <h5 [class]="'card-title'">People</h5>
+          The api did not return any data
+        </div>
+      </div>
+    </div>
+
+    <!-- Species -->
+    <h4 *ngIf="ret.species?.length >= 1" [class]="'mt-5 text-center w-100'">
+      Species
+    </h4>
+    <div
+      *ngFor="let species of ret.species"
+      [class]="'col-lg-6 col-md-6 col-sm-12 mt-4'"
+    >
+      <div [class]="'card'">
+        <div [class]="'card-body'">
+          <h5 [class]="'card-title'">{{ species.name }}</h5>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Classification: </strong>{{ species.classification }}
+            </li>
+            <li class="list-group-item">
+              <strong>Hair colors: </strong>{{ species.hair_colors }}
+            </li>
+            <li class="list-group-item">
+              <strong>Eye colors: </strong>{{ species.eye_colors }}
+            </li>
+            <li class="list-group-item">
+              <a [href]="species.url" [class]="'api-link'">Api data</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      *ngIf="ret.species?.length <= 1"
+      [class]="'col-lg-6 col-md-6 col-sm-12 mt-4'"
+    >
+      <div [class]="'card'">
+        <div [class]="'card-body'">
+          <div [class]="'card-title'">Species</div>
+          The api didn't return any data
+        </div>
+      </div>
+    </div>
+
+    <!-- Locations -->
+    <div
+      *ngIf="ret.locations?.length > 1"
+      [class]="'col-lg-6 col-md-6 col-sm-12 mt-4'"
+    >
+      <div [class]="'card'">
+        <div [class]="'card-body'">
+          Data if the api returns an array of location
+        </div>
+      </div>
+    </div>
+    <div
+      *ngIf="ret.locations?.length <= 1"
+      [class]="'col-lg-6 col-md-6 col-sm-12 mt-4'"
+    >
+      <div [class]="'card'">
+        <div [class]="'card-body'">
+          <h5 [class]="'card-title'">Locations</h5>
+          The api did not return any data
+        </div>
+      </div>
+    </div>
+
+    <!-- Vehicles -->
+    <div
+      *ngIf="ret.vehicles?.length > 1"
+      [class]="'col-lg-6 col-md-6 col-sm-12 mt-4'"
+    >
+      <div [class]="'card'">
+        <div [class]="'card-body'">
+          Data if the api returns an array of vehicles
+        </div>
+      </div>
+    </div>
+    <div
+      *ngIf="ret.vehicles?.length <= 1"
+      [class]="'col-lg-6 col-md-6 col-sm-12 mt-4'"
+    >
+      <div [class]="'card'">
+        <div [class]="'card-body'">
+          <h5 [class]="'card-title'">Vehicles</h5>
+          The api did not return any data
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- If there is no api data for the Ghibli film -->
+<div [class]="'col-12'" *ngIf="!filmData">
+  <div [class]="'card'">
+    <div [class]="'card-body'">
+      <h5 [class]="'card-title'">No Api Data</h5>
+      The api did not return any data regarding this film
+    </div>
+  </div>
+</div>

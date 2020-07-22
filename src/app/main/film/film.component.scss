@@ -34,3 +34,12 @@
 .title-border p {
   font-size: 1rem;
 }
+
+.api-link {
+  transition: color $transition;
+  color: $secondary;
+}
+.api-link:hover {
+  color: $quarternary;
+  text-decoration: none;
+}

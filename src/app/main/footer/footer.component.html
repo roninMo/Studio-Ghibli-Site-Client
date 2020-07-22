@@ -1,0 +1,82 @@
+<div class="footer-section container-fluid text-center mt-5">
+  <div class="row justify-content-center">
+    <div class="footer-container col-lg-3 col-md-4 col-sm-12 icons">
+      <img
+        src="../../../assets/img/ghibli_logo_gold.png"
+        alt="Studio Ghibli logo"
+      />
+
+      <div class="icon-holder mt-3">
+        <a class="icontainer"><i class="fab fa-github"></i></a>
+        <a class="icontainer"><i class="fab fa-twitter"></i></a>
+        <a class="icontainer"><i class="fab fa-google-plus-g"></i></a>
+        <a class="icontainer"><i class="fab fa-linkedin-in"></i></a>
+        <!-- <a class="icontainer"><i class="fab fa-github-square"></i></a> -->
+        <!-- <a class="icontainer"><i class="fab fa-twitter-square"></i></a> -->
+        <!-- <a class="icontainer"><i class="fab fa-google-plus-square"></i></a> -->
+        <!-- <a class="icontainer"><i class="fab fa-linkedin"></i></a> -->
+      </div>
+    </div>
+
+    <div class="footer-container col-lg-2 col-md-4 col-sm-12 text-center pt-2">
+      <h5 class="text-muted">Support</h5>
+      <ul>
+        <li><a>Contact Us</a></li>
+        <li><a>FAQ</a></li>
+        <li><a>Downloads</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-container col-lg-2 col-md-4 col-sm-12 text-center pt-2">
+      <h5 class="text-muted">Studio Ghibli</h5>
+      <ul>
+        <li><a routerLink="">About Us</a></li>
+        <li *ngIf="!loggedIn"><a routerLink="/auth">Login</a></li>
+        <li *ngIf="loggedIn"><a (click)="logout()">Logout</a></li>
+        <li *ngIf="loggedIn"><a routerLink="/home">Home</a></li>
+        <li *ngIf="loggedIn"><a routerLink="/home/films">Films</a></li>
+        <li *ngIf="loggedIn">
+          <a routerLink="/home/characters">Characters</a>
+        </li>
+        <li *ngIf="loggedIn"><a routerLink="/home/characters">Species</a></li>
+        <li *ngIf="loggedIn"><a routerLink="/home/characters">Vehicles</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-container col-lg-4 col-md-12 col-sm-12 text-left">
+      <h5 class="email-header mt-2 text-muted">Subscribe to Studio Ghibli</h5>
+
+      <a class="email" href="mailto:schwegmank4@gmail.com">
+        <div class="email-item">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="email-item">
+          If you want to contact me directly, send me an email!
+        </div>
+      </a>
+
+      <div>
+        <div class="form-group w-100">
+          <label class="pure-material-textfield-standard">
+            <input placeholder=" " />
+            <span>Email address</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">
+          Sign Up
+        </button>
+      </div>
+    </div>
+
+    <div class="text-muted p-4">
+      <div class="col-12">
+        <hr />
+        &copy; Copyright 2020.
+      </div>
+      <div class="col-12">
+        All rights reserved by Kieran Schwegman
+      </div>
+    </div>
+  </div>
+</div>

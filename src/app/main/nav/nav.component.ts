@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { FilmUrls } from 'src/app/filmMetaData';
+import { env } from '../../../../environment';
 
 @Component({
   selector: 'app-nav',
@@ -8,8 +10,9 @@ import { FilmUrls } from 'src/app/filmMetaData';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
+  public loggedIn = env.loggedIn;
   films = FilmUrls;
-  constructor() {}
+  constructor(public router: Router) {}
 
   ngOnInit(): void {}
 
