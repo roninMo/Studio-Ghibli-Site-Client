@@ -2,8 +2,7 @@
 
 # compiled output
 /dist
-# /src/dist
-/asdasdasdsd/gotta delete a file
+/src/dist
 /tmp
 /out-tsc
 # Only exists if Bazel was run
