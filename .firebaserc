@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "studioghibliapi-66d2a": {
+      "hosting": {
+        "client": [
+          "studioghibliapi-66d2a"
+        ]
+      }
+    }
+  }
+}

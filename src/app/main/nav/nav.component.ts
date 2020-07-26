@@ -16,7 +16,12 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  login() {
+    this.router.navigate(['/auth']);
+  }
+
   logout() {
     console.warn('Logging out!');
+    this.router.navigate(['/auth']);
   }
 }
