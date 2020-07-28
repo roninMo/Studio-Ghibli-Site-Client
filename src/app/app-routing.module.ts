@@ -14,7 +14,7 @@ import { VehiclesComponent } from './main/vehicles/vehicles.component';
 import { PageNotFoundComponent } from './main/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
   {
     path: 'auth',
     component: CarouselComponent,
