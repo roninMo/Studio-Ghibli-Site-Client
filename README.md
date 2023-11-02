@@ -1,3 +1,5 @@
+This is from forever ago, but I love studio ghibli so I haven't taken it down yet
+
 # Client
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
